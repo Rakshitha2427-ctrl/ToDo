@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+</head>
+<body class="bg-gray-500 flex flex-col items-center p-40 gap-5">
+
+    <!-- {% for task in tasks %}
+        {{task.title}}<br>
+        {{task.description}}<br>
+    {% endfor %} -->
+{% for task in tasks %}
+        <div class="bg-white w-[40%] p-5 rounded-xl justify-between flex flex-col gap-2">
+        <div class="flex justify-between items-center">
+          
+            <p class="text-green-600 font-bold text-xl{% if task.completed %}
+            line-through
+            {% endif %}">{{task.title}}</p> 
+            <a href="{% url 'toggle_complete' task.id %}">
+            <i class='bx bx-check-circle text-2xl text-blue-500'></i></a>
+        </div>
+        <p class="text-gray-300  font-semibold text-xl">{{task.description}}</p>
+        <!-- <input type="date" id="dateInput">
+        <script>
+            const time=time;
+            const today=new Date();
+            document.getElementById("dateInput").value=month;
+            document.getElementById("dateinput").value=Date;
+            document.getElementById("dateinput").value=year;
+        </script> -->
+        <hr>
+<div>
+    <p class="flex flex-row justify-between items-center text-xl{% if task.completed %}<p class="text-red-500"> not completed</p>{% endif %}">{{task.description}}<span class="font-bold text-gray-600"></span>Due,11:00 Am<span class="font-semibold text-gray-700">19/06/2025</span>
+    <i class='bx bx-trash text-2xl text-red-600'></i></p>
+</div>      
+    </div>
+   {% endfor %} 
+</body>
+</html>
