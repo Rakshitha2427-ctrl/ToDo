@@ -11,7 +11,9 @@
     --color-red-600: oklch(57.7% 0.245 27.325);
     --color-green-600: oklch(62.7% 0.194 149.214);
     --color-blue-500: oklch(62.3% 0.214 259.815);
+    --color-blue-600: oklch(54.6% 0.245 262.881);
     --color-gray-300: oklch(87.2% 0.01 258.338);
+    --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-gray-600: oklch(44.6% 0.03 256.802);
     --color-gray-700: oklch(37.3% 0.034 259.733);
@@ -24,6 +26,7 @@
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --radius-xl: 0.75rem;
+    --radius-2xl: 1rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -183,8 +186,35 @@
   .table {
     display: table;
   }
-  .w-\[40\%\] {
-    width: 40%;
+  .h-\[90px\] {
+    height: 90px;
+  }
+  .h-\[110px\] {
+    height: 110px;
+  }
+  .h-\[120px\] {
+    height: 120px;
+  }
+  .h-\[130px\] {
+    height: 130px;
+  }
+  .h-\[140px\] {
+    height: 140px;
+  }
+  .h-\[200px\] {
+    height: 200px;
+  }
+  .h-\[1320px\] {
+    height: 1320px;
+  }
+  .w-\[30\%\] {
+    width: 30%;
+  }
+  .w-\[225px\] {
+    width: 225px;
+  }
+  .w-\[325px\] {
+    width: 325px;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -195,9 +225,6 @@
   .flex-col {
     flex-direction: column;
   }
-  .flex-row {
-    flex-direction: row;
-  }
   .items-center {
     align-items: center;
   }
@@ -207,11 +234,11 @@
   .gap-2 {
     gap: calc(var(--spacing) * 2);
   }
-  .gap-5 {
-    gap: calc(var(--spacing) * 5);
+  .gap-15 {
+    gap: calc(var(--spacing) * 15);
   }
-  .rounded-xl {
-    border-radius: var(--radius-xl);
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
   }
   .border {
     border-style: var(--tw-border-style);
@@ -226,8 +253,8 @@
   .p-5 {
     padding: calc(var(--spacing) * 5);
   }
-  .p-40 {
-    padding: calc(var(--spacing) * 40);
+  .p-48 {
+    padding: calc(var(--spacing) * 48);
   }
   .text-2xl {
     font-size: var(--text-2xl);
@@ -245,17 +272,17 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
-  .text-blue-500 {
-    color: var(--color-blue-500);
+  .text-blue-600 {
+    color: var(--color-blue-600);
   }
-  .text-gray-300 {
-    color: var(--color-gray-300);
+  .text-gray-400 {
+    color: var(--color-gray-400);
+  }
+  .text-gray-500 {
+    color: var(--color-gray-500);
   }
   .text-gray-600 {
     color: var(--color-gray-600);
-  }
-  .text-gray-700 {
-    color: var(--color-gray-700);
   }
   .text-green-600 {
     color: var(--color-green-600);

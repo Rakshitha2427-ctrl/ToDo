@@ -24,3 +24,5 @@ urlpatterns = [
     path('toggle_complete/<str:task_id>',toggle_complete,name='toggle_complete'),
     path('delete/<str:task_id>',delete,name='delete')
 ]
+
+

@@ -8,14 +8,14 @@
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
 
 </head>
-<body class="bg-gray-500 flex flex-col items-center p-48 gap-15 ">
+<body class="bg-gray-500 flex flex-col items-center p-48 gap-15 justify-between ">
    {% comment %} {% for task in tasks %}
         {{task.title}}<br>
         {{task.description}}<br>
     {% endfor %} {% endcomment %}
     
 {% for task in tasks %}
-    <div class="bg-white p-5 rounded-2xl w-[30%] justify-between flex-col gap-2">
+    <div class="bg-white p-5 rounded-2xl w-[325px] h-[140px] justify-between flex-col gap-2">
         <div class="flex justify-between items-center">
             <p class="text-green-600 font-bold text-2xl {% if task.completed %}
                 line-through
@@ -28,14 +28,14 @@
         </div> 
         <p class="text-gray-400 font-semibold text-xl">{{task.description}}</p>
         <hr>
-        <p class="flex justify-between items-center">
+        <div class="flex justify-between items-center">
         {% if task.completed %}
         <p class="text-red-500">completed</p>
         {% else %}
         <span class="font-bold text-gray-600">Due, {{task.due_time}}</span><span class="font-semibold text-gray-500">{{task.due_date}}</span>
         {% endif %}
         <a href="{% url 'delete' task.id %}">
-        <i class='bxr bx-trash text-red-600 text-2xl' ></i></p>
+        <i class='bxr bx-trash text-red-600 text-2xl' ></i></div>
         </a>
     </div>
 {% endfor %}
