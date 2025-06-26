@@ -21,6 +21,6 @@ from app.views import*
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index,name='index'),
-    path('toggle_complete/<str:task_id>',toggle_complete,name='toggle_complete')
+    path('toggle_complete/<str:task_id>',toggle_complete,name='toggle_complete'),
     path('delete/<str:task_id>',delete,name='delete')
 ]
